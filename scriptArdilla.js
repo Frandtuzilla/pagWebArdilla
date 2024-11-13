@@ -167,4 +167,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     slides[0].classList.add("active"); // Activa la primera diapositiva
     startAutoPlay(); // Inicia la reproducción automática
+
+    // **Toggle Navigation Menu for Mobile**
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    menuToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('active');
+    });
 });
