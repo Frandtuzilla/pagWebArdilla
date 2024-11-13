@@ -356,6 +356,96 @@ html {
     }
 }
 
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0;
+    }
+
+    .equipo, .personas-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .persona-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .persona-caja {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    .valores {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #nosotros h2, #testimonios h2, #servicios h2, #contacto h2 {
+        font-size: 24px;
+    }
+
+    #nosotros h3, #servicios h3 {
+        font-size: 20px;
+    }
+
+    #nosotros p, .persona-texto, #contacto label {
+        font-size: 14px;
+    }
+
+    .persona-img, .persona-caja, .servicio, .testimonio {
+        max-width: 100%;
+    }
+
+    .slide img {
+        border-radius: 5px;
+    }
+
+    .caption h5 {
+        font-size: 20px;
+    }
+
+    .caption p {
+        font-size: 14px;
+    }
+
+    .servicios-grid, .personas-grid {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    #contacto form, .cotizacion-general .btn {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .cotizacion-general .btn {
+        font-size: 14px;
+    }
+}
+
 .custom-slider {
     position: relative;
     width: 100%;
@@ -561,3 +651,4 @@ html {
 .cotizacion-general .btn:hover {
     background-color: #D62839;
 }
+
