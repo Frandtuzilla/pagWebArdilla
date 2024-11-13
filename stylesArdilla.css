@@ -156,7 +156,11 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     gap: 40px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1200px;
 }
+
 .valores li {
     background: #EDE0D4;
     padding: 15px;
@@ -164,6 +168,9 @@ header nav ul li a:hover {
     max-width: 250px;
     font-size: 16px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 250px;
+    margin: 0 10px;
+    text-align: center;
 }
 
 .equipo {
@@ -536,6 +543,20 @@ html {
         text-align: left;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
+
+    .valores {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .valores li {
+        width: 100%;
+        max-width: 300px;
+        margin: 0;
+        flex: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -645,6 +666,12 @@ html {
         gap: 20px;
     }
 
+    .valores li {
+        max-width: 90%;
+        font-size: 14px;
+        padding: 12px;
+    }
+    
     #nosotros h2, #testimonios h2, #servicios h2, #contacto h2 {
         font-size: 24px;
     }
