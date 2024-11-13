@@ -332,80 +332,152 @@ html {
     padding: 1rem;
 }
 
-/* Botón y menú para dispositivos móviles */
+/* Mobile Menu Styles */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
 #menu-toggle {
-    display: none; /* Oculto por defecto */
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
 }
 
 @media (max-width: 768px) {
-    /* Muestra el botón solo en móviles */
     #menu-toggle {
         display: block;
-        font-size: 24px;
-        background: none;
-        border: none;
-        color: #7F5539; /* Color del botón */
-        cursor: pointer;
-        margin-left: auto;
     }
 
-    /* Oculta el menú en móviles inicialmente */
-    #main-nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
+    #main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
         background-color: #7F5539;
-        padding: 0;
-        margin: 0;
+        transition: 0.3s;
+        padding-top: 60px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     }
 
-    /* Muestra el menú cuando se active */
-    #main-nav ul.active {
-        display: flex;
+    #main-nav.active {
+        right: 0;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #main-nav ul li {
+        width: 100%;
+    }
+
+    #main-nav ul li a {
+        display: block;
+        padding: 15px 25px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-contenedor {
         flex-direction: column;
-        align-items: flex-start;
+        padding: 1rem;
     }
-    header .container {
-        justify-content: flex-start;
+
+    .servicios-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
+
+    .servicios-grid > * {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .personas-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .persona-caja {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .custom-slider {
+        height: 60vh;
+    }
+
+    .caption {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .caption h5 {
+        font-size: 20px;
+    }
+
+    .caption p {
+        font-size: 16px;
+    }
+
     .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-container div {
-        margin-bottom: 15px;
-    }
-    .equipo, .personas-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    .equipo .persona-caja, .personas-grid .testimonio {
-        max-width: 100%;
+        gap: 30px;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 95%;
-    }
-    header nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    header .container {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-    header nav ul {
-        flex-direction: column;
-        gap: 10px;
+        width: 100%;
+        padding: 0 15px;
     }
 
+    h2 {
+        font-size: 24px !important;
+    }
+
+    h3 {
+        font-size: 20px !important;
+    }
+
+    .caption h5 {
+        font-size: 18px;
+    }
+
+    .caption p {
+        font-size: 14px;
+    }
+
+    .custom-slider {
+        height: 50vh;
+    }
+
+    #contacto form {
+        padding: 15px;
+    }
+}
     .footer-container {
         flex-direction: column;
         gap: 20px;

@@ -168,11 +168,36 @@ document.addEventListener("DOMContentLoaded", function() {
     slides[0].classList.add("active"); // Activa la primera diapositiva
     startAutoPlay(); // Inicia la reproducción automática
 
-// **Toggle Navigation Menu for Mobile**
-    const menuToggle = document.getElementById('menu-toggle');
-    const navMenu = document.querySelector('#main-nav ul');
+});
 
-    menuToggle.addEventListener('click', function () {
-        navMenu.classList.toggle('active');
+document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+    const navLinks = document.querySelectorAll('#main-nav a');
+
+    menuToggle.addEventListener('click', function() {
+        mainNav.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+    });
+
+    // Close menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mainNav.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            mainNav.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
+    });
+
+    // Prevent clicks inside menu from closing it
+    mainNav.addEventListener('click', function(e) {
+        e.stopPropagation();
     });
 });
