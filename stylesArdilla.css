@@ -333,39 +333,27 @@ html {
 }
 
 @media (max-width: 768px) {
-    #main-nav {
-        display: none; /* Oculta el menú por defecto */
+    /* Hide the menu by default */
+    #main-nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #7F5539; /* Same as sticky header background */
+        padding: 0;
+    }
+    #main-nav ul.active {
+        display: flex; /* Show menu when active */
     }
 
+    /* Toggle button for mobile */
     #menu-toggle {
         display: block;
+        font-size: 24px;
         background: none;
         border: none;
-        font-size: 24px;
         color: #fff;
         cursor: pointer;
-        z-index: 1001;
-    }
-
-    /* Clase activa para mostrar el menú */
-    #main-nav.active {
-        display: block;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #7F5539; /* Color de fondo del menú desplegable */
-        text-align: center;
-    }
-
-    #main-nav ul {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    #main-nav ul li {
-        margin: 10px 0;
+        margin-left: auto;
     }
 
     header {
