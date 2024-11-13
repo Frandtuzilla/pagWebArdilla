@@ -168,12 +168,11 @@ document.addEventListener("DOMContentLoaded", function() {
     slides[0].classList.add("active"); // Activa la primera diapositiva
     startAutoPlay(); // Inicia la reproducción automática
 
-    // **Toggle Navigation Menu for Mobile**
+// **Toggle Navigation Menu for Mobile**
     const menuToggle = document.getElementById('menu-toggle');
-    const mainNav = document.getElementById('main-nav');
+    const navMenu = document.querySelector('#main-nav ul');
 
     menuToggle.addEventListener('click', function () {
-        mainNav.querySelector('ul').classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-
 });
