@@ -1,0 +1,91 @@
+<html lang="es"></html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ardilla Seguros</title>
+        <meta name="description" content="Página web hecha por Ardillas para Ardillas para la venta de seguros de vida, auto, hogar y salud.">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="stylesArdilla.css">
+        <script src="scriptArdilla.js" defer></script>
+    </head>
+
+    <body>
+        <main>
+            <header>
+                <div class="nav-container container">
+                    <a href="/index.html#slider" aria-label="Inicio">
+                        <img src="images/ArdillaLogo.jpg" alt="Logo de Ardilla Seguros" class="logo">
+                    </a>
+                    <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+                    <nav id="main-nav">
+                        <ul>
+                            <li><a href="/index.html#slider">Inicio</a></li>
+                            <li><a href="/index.html#servicios">Servicios</a></li>
+                            <li><a href="/index.html#nosotros">Nosotros</a></li>
+                            <li><a href="/index.html#testimonios">Testimonios</a></li>
+                            <li><a href="/index.html#contacto">Contacto</a></li>
+                            <li><a href="/index.html#ubicacion">Ubicación</a></li>
+                            <li><a href="/carritoArdilla.html">Merchandise</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
+            <video class="slider-video" autoplay muted loop playsinline>
+                <source src="images/ArdillaCarita.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+            <div class="caption">
+                <h2>Apoyanos Comprando <br> Nuestros Productos!</h2>
+                <p>Tenemos todo tipo de producto para que te vuelvas parte de la familia de Ardilla Seguros</p>
+            </div>
+                        
+            <section id="tienda">
+                <h2>Nuestra Tienda</h2>
+                <div id="productos" class="productos-grid">
+                </div>
+            </section>
+        
+            <section id="carrito">
+                <h2>Carrito de Compras</h2>
+                <div id="items-carrito">
+                </div>
+                <div id="resumen-carrito">
+                    <p>Total: <span id="total-carrito">$0</span></p>
+                    <button id="vaciar-carrito">Vaciar Carrito</button>
+                    <button id="comprar-ahora">Comprar Ahora!</button>
+                </div>                
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h3>Contáctanos</h3>
+                    <p>+54 9 11 1234-5678</p>
+                    <p>Las Ardillas, Avenida Doctor Federico Leloir 174,</p>
+                    <p>1629 Pilar, Provincia de Buenos Aires.</p>
+                </div>
+                <div>
+                    <h3>Horarios</h3>
+                    <p>Lunes a Viernes: 8:00 - 18:00</p>
+                    <p>Sábados: 9:00 - 13:00</p>
+                    <p>Domingos: <strong>CERRADO</strong></p>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 Ardilla Seguros. Todos los derechos reservados.</p>
+                <nav aria-label="Enlaces de políticas">
+                    <ul>
+                        <li><a href="#" target="_blank">Política de Privacidad</a></li>
+                        <li><a href="#" target="_blank">Términos y Condiciones</a></li>
+                    </ul>                                    
+                </nav>
+            </div>
+        </footer>        
+    </body>
+</html>
